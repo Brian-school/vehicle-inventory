@@ -12,6 +12,13 @@ public class Vehicle {
         this.odometerReading = 0;
         this.price = 0.0;
     }
+    public Vehicle(long vehicleId, String makeModel, String color, int odometerReading, double price) {
+        this.vehicleId = vehicleId;
+        this.makeModel = makeModel;
+        this.color = color;
+        this.odometerReading = odometerReading;
+        this.price = price;
+    }
 
     public void initVehicle (long vehicleId, String makeModel, String color, int odometerReading, double price) {
         this.vehicleId = vehicleId;
@@ -21,8 +28,13 @@ public class Vehicle {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return color + " " + makeModel + " \nOdometer: " + odometerReading + "\nPrice: " + price + "\n\n";
+    }
+
     // getters
-    public long initVehicle() {
+    public long getVehicleId() {
         return vehicleId;
     }
 
